@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>isPTT 使用說明</title>
+<meta name="description" content="isPTT 使用說明：第一次登入、兩步驟驗證（2FA）、首頁分頁、看文章與推文、看板與我的最愛、推播通知、多帳號、外觀風格、信箱、贊助與 VIP，一步一步附截圖。">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="isPTT 使用說明">
+<meta property="og:description" content="從第一次登入到兩步驟驗證、推播、多帳號，一步一步附截圖。">
+<meta property="og:image" content="https://isptt.ismiya.com/screens/login-2fa.webp">
+<link rel="icon" href="/icon.png"><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><div class="wide-bar"><a class="brand" href="/"><img src="/icon.png" alt="">isPTT</a><nav><a href="/#features">功能</a> <a href="/guide.html" aria-current="page">使用說明</a> <a href="/support.html">支援</a> <a href="/privacy.html">隱私權</a></nav></div></header>
+<main class="guide">
+
+<h1>isPTT 使用說明</h1>
+<p class="updated">最後更新：2026 年 10 月 7 日・以 iPhone 版為例，Android 版的按鈕與名稱大致相同</p>
+<p class="lede">照著下面的步驟做就能上手。每一步都附上 App 的畫面，畫面上的按鈕名稱跟 App 裡一模一樣。找不到答案的話，看<a href="/support.html">常見問題</a>或寫信到 <a href="mailto:zhe0712@gmail.com">zhe0712@gmail.com</a>。</p>
+
+<nav class="toc" id="toc" aria-label="目錄">
+<p class="toc-title">目錄</p>
+<ol>
+<li><a href="#start">第一次使用</a></li>
+<li><a href="#2fa">兩步驟驗證</a></li>
+<li><a href="#home">首頁</a></li>
+<li><a href="#article">看文章</a></li>
+<li><a href="#boards">看板</a></li>
+<li><a href="#push">推播通知</a></li>
+<li><a href="#accounts">多帳號</a></li>
+<li><a href="#appearance">外觀</a></li>
+<li><a href="#mail">信箱</a></li>
+<li><a href="#vip">贊助與 VIP</a></li>
+<li><a href="#faq">常見問題</a></li>
+</ol>
+</nav>
+
+<!-- ============ 1 ============ -->
+<section class="gsec" id="start">
+<p class="kicker">1</p>
+<h2>第一次使用</h2>
+
+<ol class="steps">
+<li class="step">
+<div class="step-text">
+<h3>同意使用條款</h3>
+<p>第一次打開 isPTT 會先看到<span class="ui">使用條款</span>。isPTT 只是連到 ptt.cc 的閱讀工具，站上的內容都是 PTT 使用者發表的；本 App 對冒犯性內容零容忍。看完按最下面的<span class="ui">我同意並繼續</span>。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/terms.webp" width="720" height="1565" loading="lazy" decoding="async" alt="使用條款頁：說明 isPTT 只是閱讀工具、不當內容可以檢舉與封鎖，最下面是「我同意並繼續」按鈕"><figcaption>使用條款</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>輸入帳號密碼登入</h3>
+<ol class="sub">
+<li>在<span class="ui">帳號</span>、<span class="ui">密碼</span>填入你的 PTT 帳號與密碼。PTT 的密碼<strong>有分大小寫</strong>。</li>
+<li><span class="ui">記住帳號密碼</span>預設是開著的：帳密會加密存在這支手機的 Keychain，下次打開 App 自動登入，斷線時也會自己重新連上。不想存就關掉，每次自己登入。</li>
+<li>按<span class="ui">登入</span>。</li>
+</ol>
+<p>PTT 有開兩步驟驗證的話，先看下一節。</p>
+<p class="fine">記住過的帳號，下次登入畫面會列在<span class="ui">選一個帳號登入</span>，點一下就登入；帳號右邊的<span class="ui">⋯</span>可以<span class="ui">修改密碼</span>或<span class="ui">不要記住密碼</span>。要登別的帳號按<span class="ui">用其他帳號登入</span>。密碼只用來登入與斷線重連，不會送到任何伺服器。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/login.webp" width="720" height="1565" loading="lazy" decoding="async" alt="登入畫面：帳號、密碼欄位，「我有開兩步驟驗證」與「記住帳號密碼」兩個開關，登入按鈕，下面是帳號管理"><figcaption>登入畫面</figcaption></figure>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="gsec" id="2fa">
+<p class="kicker">2</p>
+<h2>兩步驟驗證（2FA）</h2>
+<p>PTT 開了兩步驟驗證之後，登入除了密碼還要一組 6 位數驗證碼。isPTT 內建驗證器：把 PTT 給的金鑰存進來，之後登入會<strong>自動算好驗證碼送出</strong>，不用切去別的 App。</p>
+
+<ol class="steps">
+<li class="step text-only">
+<div class="step-text">
+<h3>先在 PTT 開啟兩步驟驗證</h3>
+<p>在 PTT 開啟兩步驟驗證時，PTT 會給你：</p>
+<ul>
+<li><strong>一組金鑰</strong>：16 個英文字母與數字（或一張 QR code）。</li>
+<li><strong>救援碼</strong>：幾組 8 位數字，金鑰不見時登入用。</li>
+</ul>
+<p>兩樣都請先抄下來或截圖存好，下面會用到。</p>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>登入時直接設定</h3>
+<ol class="sub">
+<li>登入畫面打開<span class="ui">我有開兩步驟驗證</span>。</li>
+<li>在<span class="ui">兩步驟驗證金鑰（選填）</span>貼上金鑰：右邊的<span class="ui">貼上</span>圖示直接貼剪貼簿，旁邊的<span class="ui">掃描 QR code</span>圖示用相機掃 PTT 給的 QR code（貼 otpauth:// 連結也可以）。</li>
+<li>金鑰認得出來，下面會馬上顯示這次的 6 位數驗證碼和倒數圈。<strong>跟 PTT 或 Google Authenticator 上的數字對一下</strong>，一樣才是對的金鑰。</li>
+<li>勾著<span class="ui">記住帳號密碼</span>按登入，登入成功後金鑰就存在這支手機，之後每次登入自動帶入驗證碼。沒勾的話金鑰只用這一次。</li>
+</ol>
+<p class="fine">不想存金鑰也可以：在<span class="ui">6 位驗證碼或 8 位救援碼</span>那一欄自己打這次的驗證碼。兩欄都空著的話，登入途中 PTT 要驗證碼時會跳出<span class="ui">輸入驗證碼</span>，可以打驗證碼、挑一組存著的救援碼，或打開<span class="ui">貼上金鑰（之後自動填）</span>。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/login-2fa.webp" width="720" height="1566" loading="lazy" decoding="async" alt="登入畫面打開「我有開兩步驟驗證」：貼上金鑰後直接顯示這次的 6 位數驗證碼與倒數"><figcaption>貼上金鑰，馬上看到驗證碼</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>已經登入了：到帳號管理設定</h3>
+<ol class="sub">
+<li>首頁滑到<span class="ui">主選單</span> › <span class="ui">設定</span> › <span class="ui">帳號管理</span>（或點首頁左上角的帳號圖示 › <span class="ui">管理帳號…</span>）。</li>
+<li>點帳號右邊的<span class="ui">⋯</span> › <span class="ui">兩步驟驗證…</span>。</li>
+<li>在<span class="ui">設定 ○○ 的金鑰</span>貼上或掃描金鑰，對過驗證碼之後按<span class="ui">儲存金鑰</span>。</li>
+</ol>
+</div>
+<div class="step-shots many" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/account-menu-2fa.webp" width="720" height="1565" loading="lazy" decoding="async" alt="帳號管理：點帳號右邊的「⋯」，選單裡有「2FA 驗證碼」和「兩步驟驗證…」"><figcaption>帳號的「⋯」選單</figcaption></figure>
+<figure class="phone"><img src="/screens/2fa-setup.webp" width="720" height="1565" loading="lazy" decoding="async" alt="兩步驟驗證頁還沒設定：提醒抄下救援碼、金鑰欄位旁有貼上與掃描，下面顯示算出來的驗證碼和「儲存金鑰」"><figcaption>貼上金鑰，按「儲存金鑰」</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>看驗證碼、加到別的驗證器</h3>
+<p>存好金鑰之後，<span class="ui">兩步驟驗證…</span>這一頁每次進來都要先 Face ID（<span class="ui">用 Face ID 顯示驗證碼</span>）：</p>
+<ul>
+<li>大字是目前的驗證碼，每 30 秒換一組，快到期會變紅。<strong>點數字就複製</strong>，一分鐘後自動從剪貼簿清掉。</li>
+<li><span class="ui">加到 iOS 密碼／Google Authenticator</span>、<span class="ui">顯示 QR code（給其他驗證器掃）</span>：多一份備份。</li>
+<li><span class="ui">查看金鑰</span>：把金鑰抄下來（換手機前一定要做，見下面）。</li>
+<li><span class="ui">移除金鑰</span>：只是這支手機不再存，PTT 上的兩步驟驗證不會關掉。</li>
+</ul>
+<p class="fine">帳號清單裡，帳號底下寫著「已設兩步驟驗證」的就是存好了。<span class="ui">⋯</span> › <span class="ui">2FA 驗證碼</span>可以直接看碼，不用進設定頁。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/account-2fa.webp" width="720" height="1566" loading="lazy" decoding="async" alt="帳號的兩步驟驗證頁：大字顯示目前的驗證碼與倒數圈，可以加到 iOS 密碼或 Google Authenticator、顯示 QR code"><figcaption>驗證碼與其他驗證器</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>只當驗證器用</h3>
+<p>在電腦或別的 App 登入 PTT，也可以用 isPTT 拿驗證碼，<strong>不用密碼、不會登入 PTT</strong>：</p>
+<ol class="sub">
+<li><span class="ui">帳號管理</span> › <span class="ui">驗證器</span> › <span class="ui">新增驗證器</span>。</li>
+<li>填 <span class="ui">PTT ID</span>，貼上或掃描金鑰，按右上角<span class="ui">儲存</span>。</li>
+<li>之後在帳號管理點那個 ID，Face ID 之後就看到驗證碼。</li>
+</ol>
+<p class="fine">還沒登入也拿得到：登入畫面下方的<span class="ui">帳號管理</span>不用登入就進得去。之後把同一個 ID 加成帳號，會自動用這把金鑰。</p>
+</div>
+<div class="step-shots many" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/add-authenticator.webp" width="720" height="1565" loading="lazy" decoding="async" alt="新增驗證器：填 PTT ID、貼上金鑰後顯示驗證碼，下面提醒抄下救援碼"><figcaption>新增驗證器</figcaption></figure>
+<figure class="phone"><img src="/screens/accounts.webp" width="720" height="1566" loading="lazy" decoding="async" alt="帳號管理：帳號清單、驗證器清單（demo2）、新增驗證器、開 App 時自動登入"><figcaption>驗證器列在帳號管理裡</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>存好救援碼</h3>
+<p>同一頁往下捲到<span class="ui">救援碼</span>，把 PTT 給的救援碼貼進<span class="ui">貼上救援碼（8 位數，可以一次貼好幾組）</span>，按<span class="ui">加入</span>。</p>
+<ul>
+<li>每組只能用一次。登入時可以挑一組用，成功之後會自動從這裡刪掉。</li>
+<li>往左滑一組按<span class="ui">用過了</span>，可以手動刪掉。</li>
+<li>看救援碼一樣要先 Face ID。</li>
+</ul>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/2fa-recovery.webp" width="720" height="1565" loading="lazy" decoding="async" alt="兩步驟驗證頁下半：其他驗證器的選項、移除金鑰，救援碼清單與貼上救援碼的欄位"><figcaption>救援碼</figcaption></figure>
+</div>
+</li>
+
+<li class="step text-only">
+<div class="step-text">
+<h3>金鑰不見了怎麼辦</h3>
+<p>金鑰只存在這支手機的 Keychain，<strong>不會同步到 iCloud，也不會傳給 PTT 或 isPTT 的伺服器</strong>。所以換手機、重灌、手機遺失時，金鑰不會跟著過去：</p>
+<ol class="sub">
+<li><strong>還拿得到舊手機</strong>：先在<span class="ui">兩步驟驗證…</span>按<span class="ui">查看金鑰</span>抄下來，或<span class="ui">加到 iOS 密碼／Google Authenticator</span>，到新手機再貼一次。</li>
+<li><strong>舊手機不見了</strong>：用救援碼登入 —— 登入時 PTT 要驗證碼，在跳出來的<span class="ui">輸入驗證碼</span>打 8 位數的救援碼（或點存著的那組）。</li>
+<li>登入之後到 PTT 的「(U)ser → (2)FA」把兩步驟驗證關掉再重開，拿一把新的金鑰與新的救援碼，再照上面的步驟存進 isPTT。</li>
+</ol>
+<p class="fine">密碼和金鑰放在同一支手機，兩步驟驗證的保護會打折。介意的話可以不存金鑰，每次登入自己輸入驗證碼。</p>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="gsec" id="home">
+<p class="kicker">3</p>
+<h2>首頁</h2>
+<p>首頁上面一排是分頁：<span class="ui">即時熱門</span>、<span class="ui">我的最愛</span>、<span class="ui">熱門看板</span>、<span class="ui">最近瀏覽</span>、<span class="ui">關注文章</span>、<span class="ui">主選單</span>。<strong>左右滑動</strong>就能切換（會一直循環），也可以直接點上面的分頁名稱。打開 App 停在<span class="ui">我的最愛</span>。</p>
+
+<ol class="steps">
+<li class="step">
+<div class="step-text">
+<h3>即時熱門</h3>
+<p>isPTT 的伺服器每隔一段時間整理一次全站的熱門文章：大圖卡片標出看板、近一小時推文數，底下輪播最新推文。點卡片就打開那篇。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/live-hot.webp" width="720" height="1566" loading="lazy" decoding="async" alt="即時熱門：熱門文章的大圖卡片，標出看板、近一小時推文數，底下輪播最新推文"><figcaption>即時熱門</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>我的最愛</h3>
+<p>就是你在 PTT 上的我的最愛。每個看板有分類、說明、人氣（爆!、HOT 照 PTT 的顏色），<strong>板名旁打勾的是有新文章</strong>。往下拉重新讀取。</p>
+<p class="fine">我的最愛裡的資料夾（目錄）點了會進下一層。加入與移除看板見<a href="#boards">看板</a>。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/favorites.webp" width="720" height="1566" loading="lazy" decoding="async" alt="我的最愛：每個看板有分類、說明、人氣，有新文章的打勾"><figcaption>我的最愛</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>熱門看板</h3>
+<p>PTT 目前人氣最高的看板，第一次滑到這頁才會去讀。往下拉重新整理。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/hot-boards.webp" width="720" height="1565" loading="lazy" decoding="async" alt="熱門看板：照人氣排的看板清單"><figcaption>熱門看板</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>最近瀏覽</h3>
+<p>上面切換<span class="ui">看板</span>／<span class="ui">文章</span>。看過的文章附推、噓、推文數，之後有新推文會標「+N 新推文」。</p>
+<ul>
+<li>往左滑一筆按<span class="ui">移除</span>；長按有<span class="ui">加入關注</span>、<span class="ui">用網頁版開</span>、<span class="ui">分享網址</span>、<span class="ui">從紀錄移除</span>等。</li>
+<li>最下面的<span class="ui">清除全部瀏覽紀錄</span>一次清空。</li>
+</ul>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/recent.webp" width="720" height="1566" loading="lazy" decoding="async" alt="最近瀏覽的文章：每篇附推噓數與新推文數"><figcaption>最近瀏覽</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>關注文章</h3>
+<p>你加入關注的文章，每篇一張卡片：推、噓、總數、最後推文時間和最新幾則推文，有新推文的標紅色「+N 新推文」。開著這頁時每分鐘更新。</p>
+<ul>
+<li>上面的<span class="ui">全部標成已讀</span>清掉所有新推文標記；也可以切成<span class="ui">依看板分組</span>。</li>
+<li>卡片上的鈴鐺是<a href="#push-watch">關注文章推播</a>（VIP）。</li>
+<li>怎麼加入關注見<a href="#watch">看文章 › 加入關注</a>。</li>
+</ul>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/watched.webp" width="720" height="1566" loading="lazy" decoding="async" alt="關注文章：每篇一張卡片，顯示推、噓、總數、最後推文時間、最新推文，有新推文的標「+42 新推文」"><figcaption>關注文章</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>主選單</h3>
+<p>其他功能都在這裡：<span class="ui">我的郵件</span>、<span class="ui">水球記錄</span>、<span class="ui">搜尋看板</span>、<span class="ui">分類看板</span>、<span class="ui">黑名單</span>、<span class="ui">贊助</span>、<span class="ui">設定</span>、<span class="ui">終端機</span>、<span class="ui">登出</span>、<span class="ui">登出並忘記帳密</span>。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/menu.webp" width="720" height="1565" loading="lazy" decoding="async" alt="主選單：即時熱門、熱門文章（實驗性）、我的郵件、水球記錄、搜尋看板、分類看板、黑名單、贊助、設定、終端機、登出、登出並忘記帳密"><figcaption>主選單</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>自訂首頁版面</h3>
+<ol class="sub">
+<li><span class="ui">主選單</span> › <span class="ui">設定</span> › <span class="ui">首頁版面</span>。</li>
+<li>用開關決定要不要顯示某個分頁；<strong>按住右邊的三條線拖曳</strong>換順序。</li>
+<li>改壞了按<span class="ui">恢復預設</span>。</li>
+</ol>
+<p class="fine">主選單不能關（設定在裡面）。關掉我的最愛的話，打開 App 會停在第一個分頁。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/home-layout.webp" width="720" height="1565" loading="lazy" decoding="async" alt="首頁版面：每個分頁一個開關，右邊三條線可以拖曳排序，主選單不能關"><figcaption>首頁版面</figcaption></figure>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="gsec" id="article">
+<p class="kicker">4</p>
+<h2>看文章</h2>
+
+<ol class="steps">
+<li class="step">
+<div class="step-text">
+<h3>文章列表</h3>
+<p>進看板就是文章列表：分類上色、推文數、作者在線上的綠點，自己發的文章標「我」。</p>
+<ul>
+<li>點一篇打開；<strong>長按</strong>有<span class="ui">加入關注</span>、<span class="ui">搜尋同主題</span>、<span class="ui">查詢</span>作者、<span class="ui">看 ○○ 的文章</span>、<span class="ui">我不要看到這篇文章</span>、<span class="ui">檢舉這篇文章</span>、<span class="ui">封鎖</span>作者。</li>
+<li>往左滑一篇：<span class="ui">檢舉</span>、<span class="ui">封鎖</span>、<span class="ui">關注</span>。</li>
+<li>底下一排：重整、<span class="ui">搜尋</span>（標題關鍵字、作者、推文數幾推以上）、<span class="ui">發文</span>、<span class="ui">終端機</span>。</li>
+</ul>
+</div>
+<div class="step-shots many" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/article-list.webp" width="720" height="1566" loading="lazy" decoding="async" alt="文章列表：分類標籤、推文數、作者在線上的綠點，自己發的文章標「我」"><figcaption>文章列表</figcaption></figure>
+<figure class="phone"><img src="/screens/report-menu.webp" width="720" height="1566" loading="lazy" decoding="async" alt="長按文章的選單：加入關注、搜尋同主題、查詢作者、我不要看到這篇文章、檢舉這篇文章、封鎖作者"><figcaption>長按文章</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>文章頁</h3>
+<p>標題、作者、時間、內文、推文分開排好；表格與 ANSI 色彩照原樣對齊，文章裡的圖片直接顯示。</p>
+<p>右上角三顆按鈕，從左到右：<strong>分享</strong>、<strong>⋯（更多）</strong>、<strong>推文</strong>（筆的圖示）。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/article.webp" width="720" height="1566" loading="lazy" decoding="async" alt="文章頁：分類與標題、作者與時間，內文裡一個用 ANSI 色彩畫的表格照原樣對齊"><figcaption>文章頁</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>推噓統計與樓層</h3>
+<p>推文區的標頭即時統計<strong>推、噓、→ 各幾則</strong>，每則推文分色並標出樓層（B1、B2…）。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/pushes.webp" width="720" height="1566" loading="lazy" decoding="async" alt="推文區：標頭寫著推 12、噓 2、→ 4，每則推文分色並標出樓層 B1、B2"><figcaption>推／噓／→ 統計</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>置底看最新推文</h3>
+<p>畫面底部中間兩顆按鈕：<span class="ui">回到最上面</span>（往上的箭頭）和<span class="ui">置底</span>（往下的箭頭）。推文幾千則的文章按<strong>置底</strong>直接跳到最新的推文，往上捲會自動補讀前面的內容。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/tail.webp" width="720" height="1566" loading="lazy" decoding="async" alt="置底：直接跳到最新的推文"><figcaption>置底</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>雙擊只看某人</h3>
+<p>在推文上<strong>點兩下</strong>，就只看這個人的推文，其他人的變淡。標頭會出現<span class="ui">只看 ○○ ✕</span>，點它（或再點兩下那則推文）回到全部。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/push-only.webp" width="720" height="1565" loading="lazy" decoding="async" alt="雙擊一則推文之後：只有 milktea 的推文是亮的，標頭寫著「只看 milktea ✕」"><figcaption>只看某人</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>長按推文：檢舉、封鎖</h3>
+<p><strong>長按</strong>一則推文：<span class="ui">複製這則推文</span>、<span class="ui">查詢 ○○</span>、<span class="ui">只看 ○○</span>、<span class="ui">檢舉這則推文</span>、<span class="ui">封鎖 ○○</span>。</p>
+<p class="fine">檢舉之後那篇文章會立刻從你的手機上消失，isPTT 管理員 24 小時內處理。封鎖的人之後不會再看到他的文章。誤封或想找回隱藏的文章：<span class="ui">主選單</span> › <span class="ui">黑名單</span>。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/push-menu.webp" width="720" height="1565" loading="lazy" decoding="async" alt="長按推文的選單：複製這則推文、查詢、只看、檢舉這則推文、封鎖"><figcaption>長按推文</figcaption></figure>
+</div>
+</li>
+
+<li class="step" id="watch">
+<div class="step-text">
+<h3>⋯ 選單：朗讀、加入關注、終端機畫面</h3>
+<p>按右上角的<span class="ui">⋯</span>：</p>
+<ul>
+<li><span class="ui">回覆文章</span>：會再問<span class="ui">引用原文</span>、<span class="ui">不引用</span>或<span class="ui">連推文一起引用</span>。</li>
+<li><span class="ui">加入關注</span>：加進首頁的<span class="ui">關注文章</span>，有新推文一眼就知道（再按一次<span class="ui">取消關注</span>）。</li>
+<li><span class="ui">朗讀文章</span>：用語音念出標題與內文。底下會出現一條播放列，可以上一段、暫停、下一段、停止；離開文章也會繼續念。</li>
+<li><span class="ui">選取內文…</span>、<span class="ui">複製內文</span>。</li>
+<li><span class="ui">終端機畫面</span>：看 PTT 原本的終端機排版（ASCII 圖、對齊）；按<span class="ui">回到一般閱讀</span>切回來。</li>
+<li>自己的文章多一個<span class="ui">編輯文章</span>；有多個帳號時有<span class="ui">切換帳號</span>。</li>
+</ul>
+<p><strong>分享</strong>：右上角最左邊的分享按鈕，把標題和網頁版網址一起傳出去。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/article-menu.webp" width="720" height="1565" loading="lazy" decoding="async" alt="文章右上角「⋯」的選單：回覆文章、加入關注、朗讀文章、選取內文、複製內文、終端機畫面"><figcaption>⋯ 選單</figcaption></figure>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="gsec" id="boards">
+<p class="kicker">5</p>
+<h2>看板</h2>
+
+<ol class="steps">
+<li class="step">
+<div class="step-text">
+<h3>搜尋看板</h3>
+<ol class="sub">
+<li>首頁滑到<span class="ui">主選單</span> › <span class="ui">搜尋看板</span>。</li>
+<li>打板名的開頭幾個字（英文字母、數字與 _ - .），停一下就會列出<span class="ui">符合的看板</span>，附說明與人氣。</li>
+<li>點看板進去；打完整的板名可以直接按<span class="ui">前往 ○○ 板</span>。</li>
+</ol>
+<p class="fine">想一層一層逛：<span class="ui">主選單</span> › <span class="ui">分類看板</span>。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/board-search.webp" width="720" height="1565" loading="lazy" decoding="async" alt="搜尋看板：輸入 C_，列出 C_Chat、C_Book 等符合的看板，上面有「前往 C_ 板」"><figcaption>搜尋看板</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>加入或移除我的最愛</h3>
+<ul>
+<li><strong>在看板裡</strong>：文章列表右上角的<span class="ui">⋯</span>（看板選單） › <span class="ui">加入我的最愛</span>，已經在最愛裡的會是<span class="ui">從我的最愛移除</span>。</li>
+<li><strong>在任何看板清單</strong>（我的最愛、熱門看板、搜尋結果）<strong>長按看板</strong>，一樣有<span class="ui">加入我的最愛</span>／<span class="ui">從我的最愛移除</span>。從我的最愛移除之前會再問一次。</li>
+</ul>
+<p class="fine">我的最愛直接存在 PTT 上，電腦登入看到的是同一份。PTT 上建好的資料夾在 isPTT 裡會顯示成資料夾，點了進下一層。</p>
+</div>
+<div class="step-shots many" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/board-menu.webp" width="720" height="1565" loading="lazy" decoding="async" alt="文章列表右上角的看板選單：精華區、從我的最愛移除"><figcaption>看板選單</figcaption></figure>
+<figure class="phone"><img src="/screens/favorite-menu.webp" width="720" height="1565" loading="lazy" decoding="async" alt="在我的最愛長按一個看板，跳出「從我的最愛移除」"><figcaption>長按看板</figcaption></figure>
+</div>
+</li>
+
+<li class="step text-only">
+<div class="step-text">
+<h3>精華區</h3>
+<p>文章列表右上角的<span class="ui">⋯</span> › <span class="ui">精華區</span>，進那個看板的精華區，資料夾一層一層點進去，點文章就開。往下拉重新讀取。</p>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="gsec" id="push">
+<p class="kicker">6</p>
+<h2>推播通知 <span class="vip">VIP</span></h2>
+<p>推播由 isPTT 的伺服器每隔一段時間看一次 PTT 網頁版，符合你訂閱的才推過來，所以<strong>不是即時的</strong>：熱門文章約晚 10～15 分鐘，有指定看板的關鍵字約晚幾分鐘。伺服器只會拿到推播代碼與你的 PTT ID，<strong>不會拿到密碼</strong>；關掉推播時伺服器上這支手機的資料會整個刪掉。</p>
+
+<ol class="steps">
+<li class="step">
+<div class="step-text">
+<h3>打開推播</h3>
+<ol class="sub">
+<li><span class="ui">主選單</span> › <span class="ui">設定</span> › <span class="ui">推播通知</span>。</li>
+<li>打開最上面的<span class="ui">推播通知</span>，系統問要不要允許通知時選允許。</li>
+<li>在<span class="ui">訂閱</span>選要收什麼：<span class="ui">我的文章有新推文</span>、<span class="ui">熱門文章推文破</span>（100／300／500／1000 則，或不通知）。</li>
+<li><span class="ui">看板爆文</span>：填看板名稱按<span class="ui">加入</span>，那個板有文章推文破 100 就通知。</li>
+</ol>
+<p class="fine">同一篇文章只會通知你一次，不管命中幾個訂閱。每一份名單往左滑可以刪掉。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/push-settings.webp" width="720" height="1566" loading="lazy" decoding="async" alt="推播通知設定：開關、我的文章有新推文、熱門文章推文破 300 則"><figcaption>推播通知</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>關鍵字、關注作者、夜間勿擾</h3>
+<ul>
+<li><span class="ui">標題關鍵字</span>：填<span class="ui">關鍵字</span>，<span class="ui">看板（可不填）</span>，按<span class="ui">加入</span>。一次可以填好幾個字，用空白或逗號分開（例如「地震 台北」），標題<strong>每個字都有</strong>才通知。有填看板：那個板一出現就通知（晚幾分鐘）；沒填：只比對熱門文章。</li>
+<li><span class="ui">關注作者</span>：填<span class="ui">作者 ID</span>和<span class="ui">看板</span>（兩個都要填），這個人在那個板一發文就通知。</li>
+<li><span class="ui">勿擾時段</span>：打開<span class="ui">夜間勿擾</span>，選<span class="ui">開始</span>、<span class="ui">結束</span>（台灣時間）。這段時間的通知先留在伺服器，時段一過就送；留超過三小時的就不送了。每支手機自己設。</li>
+</ul>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/push-more.webp" width="720" height="1565" loading="lazy" decoding="async" alt="推播設定往下：標題關鍵字（地震、颱風 停班）、關注作者（bullbear 在 Stock）、夜間勿擾 01:00～07:00"><figcaption>關鍵字、關注作者、勿擾</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>熱門推播黑白名單</h3>
+<p>不想收某些板的熱門推播？在<span class="ui">熱門推播</span>選<span class="ui">自訂</span>，就有四份名單：</p>
+<ul>
+<li><span class="ui">只推這些看板</span>、<span class="ui">只推標題含</span>：空的就是不限；有填就只推符合的。</li>
+<li><span class="ui">不推這些看板</span>、<span class="ui">不推標題含</span>：符合的就不推（例如不推「業配」）。</li>
+</ul>
+<p class="fine">名單只管「看板爆文」和「熱門文章推文破」；關鍵字、關注作者、我的文章、關注文章推播不受影響。選<span class="ui">系統建議</span>就由 isPTT 決定。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/push-filter.webp" width="720" height="1566" loading="lazy" decoding="async" alt="熱門推播選「自訂」：只推這些看板、不推這些看板、只推標題含、不推標題含四個名單"><figcaption>熱門推播自訂</figcaption></figure>
+</div>
+</li>
+
+<li class="step" id="push-watch">
+<div class="step-text">
+<h3>關注文章推播</h3>
+<ol class="sub">
+<li>首頁的<span class="ui">關注文章</span>，在卡片上按<strong>鈴鐺</strong>（<span class="ui">有新推文時通知</span>）。</li>
+<li>那篇<strong>每次有新推文</strong>就通知你「《標題》有 N 則新推文」，不是只通知一次。</li>
+<li>到<span class="ui">推播通知</span> › <span class="ui">關注文章推播</span>看開了哪些（每支手機最多 20 篇），往左滑關掉單篇，或<span class="ui">全部關閉</span>。</li>
+</ol>
+<p class="fine">打開<span class="ui">加入關注時也開啟通知</span>，以後加入關注的文章自動開鈴鐺。發文超過 7 天或被刪掉的文章就不再看。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/article-watch.webp" width="720" height="1565" loading="lazy" decoding="async" alt="關注文章推播：已開啟通知 2 / 20 篇、加入關注時也開啟通知、開啟通知的文章清單"><figcaption>關注文章推播</figcaption></figure>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="gsec" id="accounts">
+<p class="kicker">7</p>
+<h2>多帳號 <span class="vip">VIP</span></h2>
+<p>好幾個 PTT 帳號同時登入、隨時切換，切換是瞬間的，切回來還停在原本的畫面。每個帳號的我的最愛、關注文章、瀏覽紀錄各自分開。</p>
+
+<ol class="steps">
+<li class="step">
+<div class="step-text">
+<h3>新增帳號、切換帳號</h3>
+<ol class="sub">
+<li>點首頁<strong>左上角的帳號圖示</strong>。</li>
+<li><span class="ui">新增帳號…</span>：跳出登入畫面，登入成功就加進清單。</li>
+<li>要切換：同一個選單點帳號名稱，打勾的是現在的帳號。</li>
+</ol>
+<p class="fine">在文章裡也能切：右上角<span class="ui">⋯</span> › <span class="ui">切換帳號</span>，切過去會開同一篇（例如換個帳號推文）。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/account-switcher.webp" width="720" height="1565" loading="lazy" decoding="async" alt="首頁左上角的帳號選單：目前帳號打勾，新增帳號…、管理帳號…"><figcaption>帳號選單</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>預設帳號與自動登入</h3>
+<p>帳號選單 › <span class="ui">管理帳號…</span>（或<span class="ui">主選單</span> › <span class="ui">設定</span> › <span class="ui">帳號管理</span>）：</p>
+<ul>
+<li><span class="ui">預設帳號</span> › <span class="ui">開 App 時使用</span>：選一個帳號，或<span class="ui">上次用的帳號</span>（有兩個以上帳號才會出現）。也可以在帳號的<span class="ui">⋯</span> › <span class="ui">設為預設帳號</span>。</li>
+<li><span class="ui">開 App 時自動登入</span>：關掉後打開 App 要自己按登入；斷線重連不受影響。</li>
+<li>右上角<span class="ui">排序</span>拖曳換順序；往左滑可以移除帳號（主帳號只能登出，不能移除）。</li>
+<li>帳號的<span class="ui">⋯</span>還有<span class="ui">修改記住的密碼</span>、<span class="ui">不要記住密碼</span>、<span class="ui">兩步驟驗證…</span>。</li>
+</ul>
+<p class="fine">截圖分享前不想露出帳號：<span class="ui">設定</span> › <span class="ui">外觀</span> › 關掉<span class="ui">顯示目前帳號</span>，左上角只剩圖示。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/accounts.webp" width="720" height="1566" loading="lazy" decoding="async" alt="帳號管理：帳號清單、驗證器清單、開 App 時自動登入"><figcaption>帳號管理</figcaption></figure>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="gsec" id="appearance">
+<p class="kicker">8</p>
+<h2>外觀</h2>
+
+<ol class="steps">
+<li class="step">
+<div class="step-text">
+<h3>選一套風格</h3>
+<p><span class="ui">主選單</span> › <span class="ui">設定</span> › <span class="ui">外觀</span>，在<span class="ui">主題</span>點一套就換。每套附一排色票預覽，共 11 套：</p>
+<p class="themes">預設、終端機風格、白色簡約風、霧面柔和風、高對比銳利風、日系粉紅風、韓系潮流風、藍色糖果風、森林綠意風、夜間霓虹風、黑金 VIP</p>
+<p class="fine">標著 VIP 的風格要贊助才能用。新安裝的預設是終端機風格＋深色。</p>
+</div>
+<div class="step-shots many" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/appearance.webp" width="720" height="1566" loading="lazy" decoding="async" alt="外觀設定：每套風格附一排色票預覽"><figcaption>主題</figcaption></figure>
+<figure class="phone"><img src="/screens/theme-gold.webp" width="720" height="1566" loading="lazy" decoding="async" alt="黑金風格的我的最愛"><figcaption>黑金 VIP</figcaption></figure>
+<figure class="phone"><img src="/screens/theme-sakura-hot.webp" width="720" height="1566" loading="lazy" decoding="async" alt="日系粉紅風格（淺色）的即時熱門"><figcaption>日系粉紅（淺色）</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>背景與深色模式</h3>
+<ul>
+<li><span class="ui">背景</span>：<span class="ui">系統背景</span>維持 iOS 原本的樣子；<span class="ui">風格背景</span>把整個 App 染成那一套的顏色。</li>
+<li><span class="ui">深色模式</span>：<span class="ui">跟隨系統</span>（含 iOS 的自動切換）、<span class="ui">淺色</span>、<span class="ui">深色</span>。每套風格都有深色和淺色兩種底色。</li>
+</ul>
+</div>
+<div class="step-shots many" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/appearance-2.webp" width="720" height="1566" loading="lazy" decoding="async" alt="外觀設定：系統背景或風格背景，深色模式選跟隨系統、淺色、深色"><figcaption>背景與深色模式</figcaption></figure>
+<figure class="phone"><img src="/screens/theme-candy-article.webp" width="720" height="1566" loading="lazy" decoding="async" alt="藍色糖果風格（淺色）的文章頁"><figcaption>藍色糖果（淺色）</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>字體大小與內文顏色</h3>
+<ul>
+<li><span class="ui">字體大小</span>：<span class="ui">跟隨系統</span>（照 iOS「顯示與亮度 › 文字大小」）、小、標準、大、特大、超大。下面那行「這是內文看起來的樣子」直接示範。</li>
+<li><span class="ui">內文顯示原本的顏色</span>：關掉的話內文的 ANSI 顏色一律用一般文字色。</li>
+</ul>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/text-size.webp" width="720" height="1565" loading="lazy" decoding="async" alt="外觀設定往下：深色模式、字體大小（跟隨系統）與示範文字、內文顯示原本的顏色、顯示目前帳號"><figcaption>字體大小</figcaption></figure>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="gsec" id="mail">
+<p class="kicker">9</p>
+<h2>信箱</h2>
+
+<ol class="steps">
+<li class="step">
+<div class="step-text">
+<h3>看信與容量</h3>
+<p><span class="ui">主選單</span> › <span class="ui">我的郵件</span>。最新的在最上面：</p>
+<ul>
+<li>左邊的點是未讀；寄件人旁的小旗子是標成重要（m）的信，小箭頭是回過的信。</li>
+<li>最上面是<span class="ui">信箱容量</span>：「12 / 200 封」加上「還可以收幾封」。七成以上轉黃、九成橘色並提醒「快滿了」、超過上限變紅。</li>
+</ul>
+<p class="fine">信箱爆了的話，PTT 每次登入都會把你丟進信箱，記得整理。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/mail.webp" width="720" height="1565" loading="lazy" decoding="async" alt="信箱：信箱容量 12 / 200 封、還可以收 188 封，底下每封信有寄件人頭像、日期、主題，未讀的有點"><figcaption>信箱</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>寫信、回信</h3>
+<ol class="sub">
+<li>右上角的筆型按鈕（<span class="ui">寄信</span>）打開<span class="ui">站內寄信</span>。</li>
+<li>填<span class="ui">收件人</span>（PTT 帳號）、<span class="ui">標題</span>、<span class="ui">內文</span>，按<span class="ui">寄出</span>。</li>
+</ol>
+<p>回信：在信上<strong>往左滑</strong> › <span class="ui">回信</span>，收件人會自動填好。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/mail-compose.webp" width="720" height="1565" loading="lazy" decoding="async" alt="站內寄信：收件人、標題、內文，右上角寄出"><figcaption>站內寄信</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>刪信與整理</h3>
+<ul>
+<li><strong>刪一封</strong>：往左滑 › <span class="ui">刪除</span>，會再問一次。</li>
+<li><strong>一次刪好幾封</strong>：右上角<span class="ui">整理</span>，勾選要刪的信，按底下的<span class="ui">刪除 N 封</span>。按<span class="ui">完成</span>離開整理。</li>
+</ul>
+<p class="fine">刪掉的信會進 PTT 的資源回收筒（信箱裡按 ~），還找得回來。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/mail-edit.webp" width="720" height="1565" loading="lazy" decoding="async" alt="整理模式：勾選了兩封，底下有「刪除範圍…」與「刪除 2 封」"><figcaption>整理</figcaption></figure>
+</div>
+</li>
+
+<li class="step">
+<div class="step-text">
+<h3>刪除範圍</h3>
+<ol class="sub">
+<li>在<span class="ui">整理</span>模式按左下角的<span class="ui">刪除範圍…</span>。</li>
+<li>填<span class="ui">起點編號</span>和<span class="ui">終點編號</span>。編號是每封信右邊的 #數字，1 是最舊的一封。</li>
+<li>按<span class="ui">刪除</span>，確認「刪除第 a～b 封，共 N 封？」。</li>
+</ol>
+<p class="fine">標成重要（m）的信 PTT 會留著不刪。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/mail-range.webp" width="720" height="1565" loading="lazy" decoding="async" alt="刪除範圍：起點編號、終點編號（最多 12），說明編號是信件的 #數字、標成重要的信不刪"><figcaption>刪除範圍</figcaption></figure>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="gsec" id="vip">
+<p class="kicker">10</p>
+<h2>贊助與 VIP</h2>
+
+<ol class="steps">
+<li class="step">
+<div class="step-text">
+<h3>贊助支持</h3>
+<p>isPTT 免費、不放廣告。喜歡的話：<span class="ui">主選單</span> › <span class="ui">贊助</span>，按<span class="ui">贊助支持</span>那一列付款。贊助之後打開 VIP 功能，也不會再看到贊助提示：</p>
+<ul>
+<li><a href="#push">推播通知</a>（含關注文章推播）</li>
+<li><a href="#accounts">多帳號同時登入</a></li>
+<li>VIP 風格（外觀設定裡標著 VIP 的主題）</li>
+</ul>
+<p class="fine">贊助是一次付清，不是訂閱。我的最愛最上面的「贊助支持 isPTT」提示列，贊助之後就不見了。</p>
+</div>
+<div class="step-shots">
+<figure class="phone"><img src="/screens/sponsor.webp" width="720" height="1566" loading="lazy" decoding="async" alt="贊助頁：VIP 功能列表（推播通知、多帳號同時登入、VIP 風格）與「贊助支持 NT$399」"><figcaption>贊助</figcaption></figure>
+</div>
+</li>
+
+<li class="step text-only">
+<div class="step-text">
+<h3>換手機、重新安裝：恢復購買</h3>
+<ul>
+<li><strong>iPhone</strong>：<span class="ui">主選單</span> › <span class="ui">贊助</span> › <span class="ui">回復購買</span>，用同一個 Apple ID。</li>
+<li><strong>Android</strong>：同一頁的<span class="ui">恢復購買</span>，用同一個 Google 帳號。</li>
+</ul>
+</div>
+</li>
+
+<li class="step text-only">
+<div class="step-text">
+<h3>舊版 Android isPTT 贊助過的</h3>
+<p>以前在舊版 Android isPTT 贊助（移除廣告）過的，更新成新版之後<strong>打開 App 就自動恢復 VIP</strong>，不用再買一次，也不用按任何按鈕。手機上登入的要是當初購買的那個 Google 帳號。</p>
+</div>
+</li>
+</ol>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="gsec" id="faq">
+<p class="kicker">11</p>
+<h2>常見問題</h2>
+<p>推播沒收到、換手機後贊助不見、看到不當內容怎麼辦……都整理在<a href="/support.html">支援頁的常見問題</a>。還是解決不了，寫信到 <a href="mailto:zhe0712@gmail.com">zhe0712@gmail.com</a>；畫面跑掉或文章打不開時，到<span class="ui">設定</span> › <span class="ui">診斷紀錄</span>附上紀錄最有幫助。</p>
+<p><a href="#toc">↑ 回到目錄</a></p>
+</section>
+
+<p class="fine shots-note">畫面中的看板、文章、推文、信件與帳號都是示範用的假資料；兩步驟驗證的金鑰是公開的測試金鑰。</p>
+<footer>isPTT 是第三方的閱讀工具，與批踢踢實業坊官方無關。站上所有內容由 PTT 使用者自行發表。 · <a href="/">首頁</a> · <a href="/support.html">支援</a> · <a href="/privacy.html">隱私權政策</a></footer>
+</main>
+</body></html>
