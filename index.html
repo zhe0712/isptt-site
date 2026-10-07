@@ -3,26 +3,186 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>isPTT — PTT 批踢踢閱讀器</title>
-<meta name="description" content="isPTT：沒有廣告的 PTT 批踢踢閱讀器。推播通知、多帳號、內建兩步驟驗證（2FA）。iOS 與 Android。">
+<meta name="description" content="isPTT：沒有廣告的 PTT 批踢踢閱讀器。內建兩步驟驗證（2FA）、推播通知與黑白名單、多帳號、重新排版的文章、11 套風格。iOS 與 Android。">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="isPTT — PTT 批踢踢閱讀器">
+<meta property="og:description" content="內建兩步驟驗證、推播通知、多帳號，沒有廣告。">
+<meta property="og:image" content="https://isptt.ismiya.com/screens/live-hot.webp">
 <link rel="icon" href="/icon.png"><link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="top"><div><a class="brand" href="/"><img src="/icon.png" alt="">isPTT</a><nav><a href="/support.html">支援</a> <a href="/privacy.html">隱私權</a></nav></div></header>
-<main>
+<header class="top"><div class="wide-bar"><a class="brand" href="/"><img src="/icon.png" alt="">isPTT</a><nav><a href="#features">功能</a> <a href="/support.html">支援</a> <a href="/privacy.html">隱私權</a></nav></div></header>
+<main class="landing">
+
 <section class="hero">
-<img src="/icon.png" alt="isPTT">
+<img src="/icon.png" alt="isPTT 圖示" width="96" height="96">
 <h1>isPTT</h1>
 <p>舒服地讀 PTT。沒有廣告。</p>
-</section>
-<div class="grid">
-<div class="card"><h3>內建兩步驟驗證<span class="new">新</span></h3><p>PTT 開了 2FA 也能直接登入：App 內建驗證器，登入時自動帶入驗證碼，不用切去別的 App。金鑰加密存在你的手機。</p></div>
-<div class="card"><h3>推播通知</h3><p>關鍵字（例如「地震」）、追蹤作者、我的文章有新推文、看板爆文，還能用黑白名單挑看板與關鍵字。</p></div>
-<div class="card"><h3>多帳號</h3><p>好幾個 PTT 帳號同時登入、隨時切換，各自的最愛、關注與紀錄分開。</p></div>
-<div class="card"><h3>重新排版的文章</h3><p>標題、內文、推文分開顯示，表格與 ANSI 排版照原樣對齊；一鍵置底看最新推文，圖片載入不亂跳。</p></div>
-<div class="card"><h3>關注文章</h3><p>把文章加入關注，有新推文就看得到（VIP 可推播通知）。</p></div>
-<div class="card"><h3>11 套風格</h3><p>經典終端機黑底、黑金、日系粉紅……深色淺色自己選。</p></div>
+<!-- TODO 上架後換成正式連結：App Store（https://apps.apple.com/app/id…）、Google Play（https://play.google.com/store/apps/details?id=com.ismiya.isptt） -->
+<div class="stores">
+<a class="store" href="#"><span class="store-small">下載 iPhone 版</span>App Store</a>
+<a class="store" href="#"><span class="store-small">下載 Android 版</span>Google Play</a>
 </div>
-<p class="lede" style="margin-top:2rem">isPTT 不放廣告。喜歡的話可以在 App 內贊助支持，解鎖 VIP 功能。<br>老使用者：Android 版就是原本的 isPTT，直接更新；以前贊助過的會自動恢復 VIP。</p>
+<p class="hero-note">內建兩步驟驗證・推播通知・多帳號・11 套風格</p>
+</section>
+
+<div class="hero-shots" tabindex="0" role="region" aria-label="App 畫面">
+<figure class="phone"><img src="/screens/favorites.webp" width="720" height="1566" decoding="async" alt="我的最愛：每個看板有分類、說明、人氣（爆!、HOT 照 PTT 的顏色分級），有新文章的打勾"></figure>
+<figure class="phone phone-main"><img src="/screens/live-hot.webp" width="720" height="1566" decoding="async" fetchpriority="high" alt="即時熱門：熱門文章的大圖卡片，標出看板、近一小時推文數，底下輪播最新推文"></figure>
+<figure class="phone"><img src="/screens/article-list.webp" width="720" height="1566" decoding="async" alt="文章列表：分類標籤、推文數、作者在線上的綠點，自己發的文章標「我」，右上角是看板人氣"></figure>
+</div>
+
+<section class="feature solo" id="features">
+<div class="feature-text">
+<p class="kicker">首頁</p>
+<h2>左右一滑，想看的都在</h2>
+<p>即時熱門、我的最愛、熱門看板、最近瀏覽、關注文章，左右滑動切換；要哪些分頁、順序怎麼排可以自己決定。</p>
+<ul>
+<li><strong>即時熱門</strong>：伺服器每十分鐘整理一次全站熱門，大圖卡片加上最新推文輪播。</li>
+<li><strong>我的最愛</strong>：人氣照 PTT 的顏色分級（爆!、HOT），有新文章的看板打勾。</li>
+<li><strong>文章列表</strong>：分類上色、推文數一眼看到，自己發的文章標「我」。</li>
+</ul>
+</div>
+</section>
+
+<section class="feature" id="2fa">
+<div class="feature-text">
+<p class="kicker">兩步驟驗證<span class="new">新</span></p>
+<h2>PTT 開了 2FA，也能直接登入</h2>
+<p>PTT 新增了兩步驟驗證，多數 PTT App 還不支援。isPTT 內建驗證器：</p>
+<ul>
+<li>登入時自動帶入 6 位數驗證碼，不用切去別的 App。</li>
+<li>掃 PTT 給的 QR code 或貼上金鑰就設定好；也可以只當驗證器用，或加到 iOS 密碼／Google Authenticator。</li>
+<li>金鑰與救援碼加密存在你的手機，看金鑰要先 Face ID，不會傳到任何伺服器。</li>
+</ul>
+</div>
+<div class="shots" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/login-2fa.webp" width="720" height="1566" loading="lazy" decoding="async" alt="登入畫面打開「我有開兩步驟驗證」：貼上金鑰後直接顯示這次的 6 位數驗證碼與倒數"><figcaption>登入時就填好</figcaption></figure>
+<figure class="phone"><img src="/screens/account-2fa.webp" width="720" height="1566" loading="lazy" decoding="async" alt="帳號的兩步驟驗證頁：大字顯示目前的驗證碼與倒數圈，可以加到 iOS 密碼或 Google Authenticator、顯示 QR code"><figcaption>內建驗證器</figcaption></figure>
+</div>
+</section>
+
+<section class="feature" id="push">
+<div class="feature-text">
+<p class="kicker">推播通知</p>
+<h2>重要的事，不用一直刷</h2>
+<ul>
+<li>關鍵字（例如「地震」，可以指定看板）、追蹤作者、我的文章有新推文、看板爆文、熱門文章推文破幾則。</li>
+<li><strong>熱門推播黑白名單</strong>：只推、或不推哪些看板和標題關鍵字，不想看的板不會再跳出來。</li>
+<li>夜間勿擾，每支手機自己設。</li>
+</ul>
+<p class="fine">推播由 isPTT 的伺服器看過 PTT 網頁版之後發出，熱門文章約晚 10～15 分鐘。伺服器只會拿到推播代碼與你的 PTT ID，不會拿到密碼。</p>
+</div>
+<div class="shots" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/push-settings.webp" width="720" height="1566" loading="lazy" decoding="async" alt="推播通知設定：開關、我的文章有新推文、熱門文章推文破 300 則"><figcaption>訂閱什麼自己選</figcaption></figure>
+<figure class="phone"><img src="/screens/push-filter.webp" width="720" height="1566" loading="lazy" decoding="async" alt="熱門推播選「自訂」：只推這些看板、不推這些看板、只推標題含、不推標題含四個名單"><figcaption>熱門推播黑白名單</figcaption></figure>
+</div>
+</section>
+
+<section class="feature" id="article">
+<div class="feature-text">
+<p class="kicker">文章排版</p>
+<h2>手機上讀起來剛剛好</h2>
+<ul>
+<li>標題、內文、推文分開排好；表格、ANSI 色彩與對齊的排版照原樣畫，不會跑掉。</li>
+<li>文章裡的圖片直接顯示、自動快取，載入時不會把你正在看的地方推走。</li>
+<li>推文分色推／噓／→、附樓層，標頭即時統計推、噓、→ 各幾則。</li>
+<li>一鍵<strong>置底</strong>看最新推文，往上捲自動補讀前面的內容。</li>
+</ul>
+</div>
+<div class="shots" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/article.webp" width="720" height="1566" loading="lazy" decoding="async" alt="文章頁：分類與標題、作者與時間，內文裡一個用 ANSI 色彩畫的表格照原樣對齊"><figcaption>表格與 ANSI 照原樣</figcaption></figure>
+<figure class="phone"><img src="/screens/article-images.webp" width="720" height="1566" loading="lazy" decoding="async" alt="文章內文的圖片連結直接顯示成圖片"><figcaption>圖片直接看</figcaption></figure>
+<figure class="phone"><img src="/screens/pushes.webp" width="720" height="1566" loading="lazy" decoding="async" alt="推文區：標頭寫著推 12、噓 2、→ 4，每則推文分色並標出樓層 B1、B2"><figcaption>推／噓／→ 統計與樓層</figcaption></figure>
+<figure class="phone"><img src="/screens/tail.webp" width="720" height="1566" loading="lazy" decoding="async" alt="置底：直接跳到最新的推文"><figcaption>置底看最新推文</figcaption></figure>
+</div>
+</section>
+
+<section class="feature" id="accounts">
+<div class="feature-text">
+<p class="kicker">多帳號</p>
+<h2>好幾個帳號，同時在線</h2>
+<p>好幾個 PTT 帳號同時登入、隨時切換，切換是瞬間的，切回來還停在原本的畫面。每個帳號的我的最愛、關注文章、瀏覽紀錄各自分開。</p>
+<p>密碼加密存在手機的 Keychain，只用來登入與斷線重連，不會送到任何伺服器。</p>
+</div>
+<div class="shots" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/accounts.webp" width="720" height="1566" loading="lazy" decoding="async" alt="帳號管理：帳號清單、驗證器清單、開 App 時自動登入"><figcaption>帳號與驗證器一起管</figcaption></figure>
+</div>
+</section>
+
+<section class="feature" id="watched">
+<div class="feature-text">
+<p class="kicker">關注文章・最近瀏覽</p>
+<h2>追的文章有新推文，一眼就知道</h2>
+<ul>
+<li>把文章加入關注，卡片上直接看到推噓數、最後推文時間和最新幾則推文，有新推文標紅色。</li>
+<li>VIP 可以按鈴鐺，關注的文章每次有新推文就推播通知。</li>
+<li>最近瀏覽的看板與文章都記著，點一下就回去。</li>
+</ul>
+</div>
+<div class="shots" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/watched.webp" width="720" height="1566" loading="lazy" decoding="async" alt="關注文章：每篇一張卡片，顯示推、噓、總數、最後推文時間、最新推文，有新推文的標「+42 新推文」"><figcaption>關注文章</figcaption></figure>
+<figure class="phone"><img src="/screens/recent.webp" width="720" height="1566" loading="lazy" decoding="async" alt="最近瀏覽的文章：每篇附推噓數與新推文數"><figcaption>最近瀏覽</figcaption></figure>
+</div>
+</section>
+
+<section class="feature" id="themes">
+<div class="feature-text">
+<p class="kicker">風格</p>
+<h2>11 套風格，深色淺色自己選</h2>
+<p>預設是經典的終端機黑底；也有黑金、日系粉紅、藍色糖果、森林綠意、夜間霓虹……每套風格都有深淺兩份，也可以只換強調色、背景照系統。字體大小、內文顏色也能調。</p>
+</div>
+<div class="shots" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/appearance.webp" width="720" height="1566" loading="lazy" decoding="async" alt="外觀設定：每套風格附一排色票預覽"><figcaption>挑一套喜歡的</figcaption></figure>
+<figure class="phone"><img src="/screens/theme-gold.webp" width="720" height="1566" loading="lazy" decoding="async" alt="黑金風格的我的最愛"><figcaption>黑金</figcaption></figure>
+<figure class="phone"><img src="/screens/theme-sakura-hot.webp" width="720" height="1566" loading="lazy" decoding="async" alt="日系粉紅風格（淺色）的即時熱門"><figcaption>日系粉紅（淺色）</figcaption></figure>
+<figure class="phone"><img src="/screens/theme-candy-article.webp" width="720" height="1566" loading="lazy" decoding="async" alt="藍色糖果風格（淺色）的文章頁"><figcaption>藍色糖果（淺色）</figcaption></figure>
+<figure class="phone"><img src="/screens/appearance-2.webp" width="720" height="1566" loading="lazy" decoding="async" alt="外觀設定：系統背景或風格背景，深色模式選跟隨系統、淺色、深色"><figcaption>深色模式</figcaption></figure>
+</div>
+</section>
+
+<section class="feature" id="sponsor">
+<div class="feature-text">
+<p class="kicker">沒有廣告</p>
+<h2>不放廣告，喜歡再贊助</h2>
+<p>isPTT 是免費的，而且不放廣告。喜歡的話可以在 App 內贊助支持，解鎖 VIP 功能：推播通知、多帳號同時登入、VIP 風格。贊助是一次買斷，換手機時用同一個 Apple ID／Google 帳號「回復購買」即可。</p>
+</div>
+<div class="shots" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/sponsor.webp" width="720" height="1566" loading="lazy" decoding="async" alt="贊助頁：VIP 功能列表（推播通知、多帳號同時登入、VIP 風格）與「贊助支持 NT$399」"><figcaption>贊助支持</figcaption></figure>
+</div>
+</section>
+
+<section class="feature" id="safety">
+<div class="feature-text">
+<p class="kicker">安心</p>
+<h2>你的帳號，只在你的手機</h2>
+<ul>
+<li><strong>密碼與 2FA 金鑰只存在手機</strong>（Keychain 加密），不會傳到 isPTT 的伺服器。</li>
+<li>看到不當內容：長按文章或推文選「檢舉」，內容會立刻從你的手機上消失，管理員 24 小時內處理；也可以「封鎖」該使用者，或隱藏這篇文章。</li>
+<li>沒有廣告、沒有追蹤、沒有分析 SDK。詳見<a href="/privacy.html">隱私權政策</a>。</li>
+</ul>
+</div>
+<div class="shots" tabindex="0" role="region" aria-label="截圖（可左右捲動）">
+<figure class="phone"><img src="/screens/report-menu.webp" width="720" height="1566" loading="lazy" decoding="async" alt="長按文章的選單：加入關注、搜尋同主題、查詢作者、我不要看到這篇文章、檢舉這篇文章、封鎖作者"><figcaption>檢舉、封鎖、隱藏</figcaption></figure>
+</div>
+</section>
+
+<section class="oldtimer">
+<h2>老使用者</h2>
+<p>Android 版就是原本的 isPTT，整個重寫成 2.0，直接更新就好。以前贊助過的，更新後會<strong>自動恢復 VIP</strong>，不用再買一次。</p>
+</section>
+
+<section class="cta">
+<h2>開始用 isPTT</h2>
+<!-- TODO 上架後換成正式連結（同上） -->
+<div class="stores">
+<a class="store" href="#"><span class="store-small">下載 iPhone 版</span>App Store</a>
+<a class="store" href="#"><span class="store-small">下載 Android 版</span>Google Play</a>
+</div>
+<p class="fine">有問題或建議：<a href="/support.html">支援頁</a>・<a href="mailto:zhe0712@gmail.com">zhe0712@gmail.com</a></p>
+</section>
+
+<p class="fine shots-note">畫面中的看板、文章、推文與帳號都是示範用的假資料。</p>
 <footer>isPTT 是第三方的閱讀工具，與批踢踢實業坊官方無關。站上所有內容由 PTT 使用者自行發表。 · <a href="/privacy.html">隱私權政策</a> · <a href="/support.html">支援</a></footer>
 </main>
 </body></html>

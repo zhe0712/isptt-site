@@ -24,3 +24,56 @@ a{color:var(--accent)} p,li{color:#d3e4d8}
 .card p{margin:0;font-size:.95rem}
 .new{display:inline-block;font-size:.72rem;font-weight:700;color:#000;background:var(--accent);border-radius:999px;padding:0 .5rem;margin-left:.35rem;vertical-align:2px}
 footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+/* 首頁（介紹頁） */
+.top .wide-bar{max-width:68rem}
+main.landing{max-width:68rem}
+.hero .stores{margin-top:1.4rem}
+.hero-note{font-size:.95rem!important;margin-top:1rem}
+.stores{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.store{display:inline-flex;flex-direction:column;align-items:flex-start;min-width:11rem;padding:9px 18px;border-radius:14px;
+  border:1px solid rgba(74,222,128,.55);background:rgba(74,222,128,.08);color:var(--fg);text-decoration:none;font-weight:700;font-size:1.15rem;line-height:1.25}
+.store:hover,.store:focus-visible{background:rgba(74,222,128,.18);outline:none;border-color:var(--accent)}
+.store-small{font-size:.75rem;font-weight:500;color:var(--muted)}
+.phone{margin:0;flex:0 0 auto;width:15.5rem;scroll-snap-align:center;text-align:center}
+.phone img{display:block;width:100%;height:auto;border-radius:2rem;border:6px solid #1c211d;background:#0b0f0c;
+  box-shadow:0 0 0 1px rgba(120,255,160,.18),0 18px 40px -18px rgba(74,222,128,.35)}
+.phone figcaption{margin-top:.6rem;font-size:.88rem;color:var(--muted)}
+.hero-shots{display:flex;justify-content:center;align-items:flex-end;gap:1.5rem;margin:2.5rem 0 1rem}
+.hero-shots .phone{width:14rem}
+.hero-shots .phone-main{width:16.5rem}
+.feature{display:grid;grid-template-columns:minmax(0,20rem) minmax(0,1fr);gap:2.5rem;align-items:center;
+  padding:3.5rem 0;border-top:1px solid var(--line)}
+.feature.solo{grid-template-columns:minmax(0,42rem);justify-content:center;text-align:left}
+.feature h2{border:0;padding:0;margin:.2rem 0 .8rem;font-size:1.6rem;line-height:1.35}
+.feature ul{padding-left:1.2rem;margin:.6rem 0}
+.feature li{margin:.35rem 0}
+.kicker{margin:0;color:var(--accent);font-weight:700;font-size:.9rem;letter-spacing:.06em}
+.fine{font-size:.88rem;color:var(--muted)}
+.shots{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .25rem 1rem;
+  -webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#2b3a2f transparent}
+.shots:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.oldtimer{border:1px solid rgba(74,222,128,.4);background:var(--card);border-radius:18px;padding:1.2rem 1.4rem;margin:1rem 0 0}
+.oldtimer h2{border:0;padding:0;margin:0 0 .3rem}
+.oldtimer p{margin:0}
+.cta{text-align:center;padding:3.5rem 0 1rem}
+.cta h2{border:0;padding:0;margin:0 0 1.2rem;font-size:1.6rem}
+.shots-note{text-align:center;margin-top:2rem}
+@media (max-width:52rem){
+  .feature{grid-template-columns:minmax(0,1fr);gap:1.2rem;padding:2.6rem 0}
+  .feature h2{font-size:1.35rem}
+  .shots{margin:0 -1.25rem;padding:.5rem 1.25rem 1rem;scroll-padding:0 1.25rem}
+  .phone{width:13.5rem}
+  .hero-shots{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;margin:2rem -1.25rem 0;padding:0 1.25rem 1rem;align-items:flex-end}
+  .hero-shots .phone{width:12rem}.hero-shots .phone-main{width:13.5rem}
+  .hero h1{font-size:2.1rem}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.feature{scroll-margin-top:64px}
+@media (max-width:30rem){
+  .hero{padding:1rem 0 .5rem}
+  .hero img{width:76px;height:76px;border-radius:18px}
+  .store{min-width:0;flex:1 1 9.5rem;padding:8px 14px;font-size:1.05rem}
+  .top nav a{font-size:.88rem}
+  .top div{gap:.8rem}
+}
