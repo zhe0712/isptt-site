@@ -3,46 +3,105 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>isPTT — 隱私權政策</title><link rel="icon" href="/icon.png"><link rel="stylesheet" href="/style.css">
+<style>
+.table-wrap{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border:1px solid rgba(128,128,128,.35);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:rgba(128,128,128,.12)}
+code{font-size:.9em}
+</style>
 </head>
 <body>
 <header class="top"><div><a class="brand" href="/"><img src="/icon.png" alt="">isPTT</a><nav><a href="/guide.html">使用說明</a> <a href="/support.html">支援</a> <a href="/privacy.html">隱私權</a></nav></div></header>
 <main>
 <h1>isPTT 隱私權政策</h1>
-<p class="updated">最後更新：2026 年 10 月 7 日</p>
-<p class="lede"><strong>一句話：你的 PTT 密碼與兩步驟驗證金鑰只存在你的手機裡，不會傳到我們的伺服器。我們只在你打開推播時，存推播需要的最少資料；不放廣告、不做追蹤。</strong></p>
-
-<h2>1. 存在你手機上的資料</h2>
+<p class="updated">最後更新：2026 年 10 月 11 日</p>
+<h2>簡短版</h2>
 <ul>
-<li><strong>PTT 帳號與密碼</strong>（如果你選擇記住）：存在 iOS 鑰匙圈／Android Keystore 加密的空間，只用來登入 ptt.cc。</li>
-<li><strong>兩步驟驗證（2FA）金鑰與救援碼</strong>（如果你選擇儲存）：同樣加密存在手機上，只用來在登入 PTT 時算出驗證碼。不會備份到雲端、不會傳送給任何人。</li>
-<li>我的最愛、瀏覽紀錄、關注文章、封鎖名單、設定：存在手機上。</li>
+<li>你的 <strong>PTT 帳號密碼只存在你自己的裝置裡</strong>，絕不會送到 isPTT 的伺服器（伺服器收到帶密碼的資料會直接拒絕）。</li>
+<li>isPTT 有一台自己的伺服器（ismiya.com），只用來做幾件需要伺服器的功能：推播通知、熱門文章、網址預覽、VIP 驗證與個人檔案、檢舉、問題回報、公告與節慶動畫排程。每一項送什麼、存多久，下面都寫清楚。</li>
+<li>你在 App 裡上傳的圖片、做的短網址，放在 isPTT 自己的圖床（架在 Cloudflare 上），<strong>上傳前會先在手機上清掉拍攝地點等資訊</strong>。</li>
+<li>沒有廣告、沒有第三方分析或追蹤工具。</li>
 </ul>
-<p>App 直接連線到 ptt.cc（批踢踢實業坊）讀取與發表內容；你在 PTT 上的行為受批踢踢實業坊的規範管理。</p>
-
-<h2>2. 推播伺服器（只在你打開推播時）</h2>
-<p>推播通知由 isPTT 的伺服器（ismiya.com）發送。打開推播時，伺服器會存：</p>
+<h2>帳號密碼與兩步驟驗證</h2>
 <ul>
-<li>這支手機的推播代碼（Apple／Google 提供，用來把通知送到這支手機）</li>
-<li>你的 PTT 帳號 ID（只有 ID，<strong>沒有密碼</strong>；用來找出「你的文章」）</li>
-<li>你設定的推播條件：關鍵字、看板、追蹤的作者、關注的文章、夜間勿擾與黑白名單</li>
-<li>這支手機封鎖的作者名單（他們的文章不推給你）</li>
+<li>PTT 帳號、密碼、兩步驟驗證金鑰存在裝置的安全儲存區：iOS／iPadOS／macOS 存在 Keychain，Android 存在系統加密的儲存區。</li>
+<li><strong>預設只存在這台裝置</strong>。你在 iPhone／iPad／Mac 的「設定 › 帳號管理」打開「用 iCloud 鑰匙圈同步密碼與兩步驟驗證金鑰」時，才會透過 Apple 的 iCloud 鑰匙圈同步到你同一個 Apple 帳號的其他裝置（端對端加密，Apple 與 isPTT 都看不到內容）。</li>
+<li>只用來登入 ptt.cc。可以隨時在設定裡刪除。</li>
 </ul>
-<p>關掉推播時，伺服器上這支手機的資料會整個刪除。伺服器另外會向 PTT 網頁版讀取公開的文章與推文，判斷要不要推播。</p>
-
-<h2>3. 檢舉</h2>
-<p>你檢舉文章或推文時，App 會把被檢舉的內容（看板、文章、作者、推文內容）與你的 PTT 帳號 ID 送到伺服器，給管理員在 24 小時內處理。為了防止濫用，伺服器只存推播代碼與 IP 位址的雜湊值，不存原文。</p>
-
-<h2>4. 贊助（App 內購買）</h2>
-<p>贊助由 Apple App Store／Google Play 處理，我們拿不到你的付款資料，只會知道這支手機是否已贊助。</p>
-
-<h2>5. 沒有廣告、沒有追蹤</h2>
-<p>isPTT 沒有廣告、沒有分析或追蹤 SDK，不會把你的資料賣給或分享給第三方。</p>
-
-<h2>6. 兒童</h2>
-<p>PTT 是使用者自行發表內容的平台，本 App 不針對 13 歲以下兒童設計。</p>
-
-<h2>7. 聯絡我們</h2>
-<p>對隱私權有任何問題，請見<a href="/support.html">支援頁</a>。</p>
-<footer>isPTT 是第三方的閱讀工具，與批踢踢實業坊官方無關。</footer>
+<h2>App 會連線到哪裡</h2>
+<ol>
+<li><strong>ptt.cc（SSH，連接埠 22）</strong>：App 的主要功能，連線全程加密。</li>
+<li><strong>isPTT 伺服器（https://ismiya.com/api）</strong>：見下一節。</li>
+<li><strong>ptt.cc 網頁版</strong>：熱門文章、推文數等公開資訊。</li>
+<li><strong>你自己點開的網址、文章裡的圖片</strong>：這些網站有各自的隱私權政策。</li>
+<li><strong>isPTT 圖床與短網址</strong>（只有你上傳圖片、或選擇把長網址轉成短網址時）：手機直接連到 isPTT 自己的圖床（Cloudflare Workers，網址 <code>i.isptt.app</code>、<code>img.isptt.app</code>、<code>isptt.app</code>、<code>s.isptt.app</code>），不經過 ismiya.com。見「圖床與短網址」一節。</li>
+<li><strong>你自己加的其他圖床</strong>（只有你在上傳選單選了它時）：App 只是在內建瀏覽器打開該圖床的上傳網頁，你在那裡上傳的圖片直接送到該服務，受該服務自己的條款與隱私權政策規範；isPTT 不經手、不保存這些圖片。剪貼簿只在你打開外部圖床後回到 App 時用來找圖片網址（iOS 要你按「貼上」才讀；Android 只在打開後 10 分鐘內回來時讀一次），內容不會送出裝置。</li>
+<li><strong>Apple iCloud</strong>（只有 Apple 裝置、而且你打開 iCloud 同步時）：設定、黑名單、標題過濾、最近瀏覽、關注文章存在你自己的 iCloud 帳號裡，在你的裝置之間同步。isPTT 的伺服器看不到這些資料。</li>
+</ol>
+<h2>isPTT 伺服器會收到什麼</h2>
+<div class="table-wrap"><table>
+<tr><th>功能</th><th>什麼時候會送</th><th>送了什麼</th><th>存多久</th></tr>
+<tr><td>推播通知</td><td>你打開推播時</td><td>推播用的裝置代碼（Apple／Google 給的）、你訂閱的看板／關鍵字／作者、要比對「我的文章有新推文」用的 PTT ID、勿擾時段、封鎖名單、是否為贊助者</td><td>到你關掉推播或移除 App 為止；送出紀錄留 7 天</td></tr>
+<tr><td>關注文章推播</td><td>你在文章打開鈴鐺時</td><td>那篇文章的看板與代碼</td><td>到你關掉鈴鐺、或文章超過期限為止</td></tr>
+<tr><td>網址預覽</td><td>你在設定打開「網址預覽」、而且捲到有網址的地方時（預設關閉）</td><td>那個網址、App 自己產生的一組亂數 ID（只用來限速）</td><td>伺服器代你去抓那個網頁的標題與縮圖，<strong>對方網站看不到你的 IP</strong>；網址預覽的請求不寫連線紀錄，你的 IP 不會跟網址記在一起；預覽快取 24 小時（做不出來的 1 小時）</td></tr>
+<tr><td>VIP 驗證</td><td>你贊助後、開 App 時</td><td>商店給的購買證明（Apple 的交易簽章／Google 的購買代碼）、App 產生的亂數 ID</td><td>伺服器向 Apple／Google 確認後發一張 7 天的 VIP 憑證；購買紀錄存雜湊，用來處理退款與跨裝置</td></tr>
+<tr><td>VIP 個人檔案</td><td>你設定自訂頭像、暱稱時</td><td>PTT ID、暱稱、頭像圖片、要顯示的徽章、是否公開、亂數 ID</td><td>到你刪除檔案為止；修改紀錄（不含 IP）留 30 天</td></tr>
+<tr><td>檢舉</td><td>你檢舉文章、推文、頭像、暱稱時</td><td>被檢舉的內容（看板、文章、作者、推文文字）、原因、你的 PTT ID（選填）、裝置代碼</td><td>處理完後保留 180 天</td></tr>
+<tr><td>問題回報</td><td>你送出回報時</td><td>你寫的內容、選填的 Email、PTT ID、App 版本、裝置型號、你附的截圖、亂數 ID</td><td>到處理完、由管理者刪除為止；你也可以來信要求刪除</td></tr>
+<tr><td>熱門文章、全站隱藏清單、公告、節慶動畫排程</td><td>App 自動抓</td><td><strong>不帶任何使用者資料</strong></td><td>—</td></tr>
+</table></div>
+<p><strong>流量監測</strong>：為了防止伺服器被灌爆，伺服器會統計每分鐘的請求數與錯誤率。計算「今天有多少不同的人」時，IP 只在記憶體裡加上每天更換的亂數做雜湊，資料庫只存人數，不存 IP 也不存雜湊。</p>
+<p>伺服器位於台灣，資料不會賣給或分享給任何第三方。</p>
+<h2>圖床與短網址</h2>
+<p>上傳圖片（發文、回覆、推文、推文自動更新的輸入框）、把長網址轉成短網址時，資料送到 isPTT 自己的圖床，由 Cloudflare（R2 儲存、D1 資料庫、Workers）代管。</p>
+<p><strong>存了什麼</strong></p>
+<div class="table-wrap"><table>
+<tr><th>項目</th><th>內容</th></tr>
+<tr><td>圖片</td><td>你上傳的那張（手機先縮到長邊 2048 px、重新壓縮），加一張長邊 320 px 的縮圖</td></tr>
+<tr><td>中繼資料</td><td><strong>上傳前在手機上就清掉</strong>拍攝地點（GPS）、相機型號、拍攝時間等 EXIF 資訊；伺服器收到後會再清一次，只留「照片方向」</td></tr>
+<tr><td>短網址</td><td>原本的長網址、短碼</td></tr>
+<tr><td>上傳者</td><td>App 產生的亂數 ID 的<strong>雜湊</strong>（加鹽，資料庫裡沒有原本的 ID），用來限流、數量上限、封鎖濫用者；VIP 的話另外記 VIP 帳號的雜湊（從購買算出來，查不回是誰），讓你在別台裝置上也看得到自己傳的。<strong>不記 PTT 帳號</strong></td></tr>
+<tr><td>等級</td><td>一般／VIP（決定保存期限與上限）</td></tr>
+<tr><td>時間與統計</td><td>上傳時間、到期時間、最後被瀏覽／點擊的時間、瀏覽／點擊次數（抽樣）</td></tr>
+<tr><td>IP</td><td>只用來防灌爆：每天換鹽的雜湊，隔天就對不起來；不跟圖片記在一起</td></tr>
+</table></div>
+<p><strong>NSFW 標記</strong>：上傳時選了「NSFW」，圖片網址會多一段 <code>/n/</code>，isPTT 看到會先霧化、點一下才顯示。這只是網址上的標記，圖本身跟一般上傳的一樣。</p>
+<p><strong>保存多久</strong>（之後可能延長；App 裡顯示的期限以圖床給的為準）</p>
+<ul>
+<li>一般：<strong>6 個月</strong>；VIP：<strong>2 年</strong>。上傳時可以選比較短的。</li>
+<li>到期前 7 天內、最近 30 天還有人看（點）的，會<strong>自動再延長</strong>一個週期；你自己選了比較短期限的不會延長。</li>
+<li>過期後圖片檔會刪除，網址變成「圖片已過期」；資料庫留一筆紀錄（不含圖片）備查。</li>
+</ul>
+<p><strong>刪除</strong></p>
+<ul>
+<li>VIP：可以在「設定 › 發文 › 我上傳的圖與短網址」隨時刪除、改保留期限。</li>
+<li>一般：上傳後 10 分鐘內可以自己刪（傳錯圖用）；之後要移除，請在 App 內檢舉，或來信 <a href="mailto:support@isptt.app">support@isptt.app</a>，我們會處理（隱私相關的要求一律處理）。</li>
+<li>刪除後圖片檔立即移除，網址變成「圖片已刪除」，已經貼到 PTT 的也一樣。</li>
+<li>刪除用的代碼只存在你的裝置上（App 刪掉重裝、換裝置又沒有備份的話，非 VIP 就刪不掉之前傳的，請來信）。</li>
+</ul>
+<p>圖片網址是公開的：任何拿到網址的人都看得到（PTT 本來就是公開的）。被檢舉的圖片由管理者檢視、可能下架。</p>
+<h2>只存在你裝置上的資料</h2>
+<ul>
+<li>最近瀏覽的看板與文章、關注的文章、我的最愛的快取</li>
+<li>封鎖名單、標題過濾規則、在這台裝置上的檢舉紀錄</li>
+<li>文章管理（草稿、存下來的文章、資料夾）</li>
+<li>App 設定</li>
+<li>「我上傳的圖與短網址」清單與刪除用的代碼</li>
+</ul>
+<p>移除 App 時這些資料會一併刪除。Apple 裝置打開 iCloud 同步時，設定、黑名單、標題過濾、最近瀏覽、關注文章會另外存在你的 iCloud 帳號裡（見上面第 7 點）。</p>
+<p><strong>備份與還原</strong>：「設定 › 備份與還原」做出來的備份檔存在你選的地方（檔案 App、分享出去、或複製成文字），isPTT 不會上傳。備份檔不含 PTT 密碼；兩步驟驗證金鑰只有在你勾選、並設定備份密碼時才會用那組密碼加密後放進去。</p>
+<h2>App 內購買</h2>
+<p>由 Apple App Store／Google Play 處理。isPTT 的伺服器只收到驗證用的購買證明（見上表「VIP 驗證」），不會收到也不會儲存你的付款資訊。</p>
+<h2>內容</h2>
+<p>isPTT 是第三方開發的 PTT 閱讀器，與批踢踢實業坊官方無隸屬關係。站上所有內容均由 PTT 使用者自行發表，本 App 不製作也不編輯這些內容。</p>
+<p>看到不當內容，可以在 App 內檢舉或封鎖該使用者，內容會立刻從你的裝置上隱藏。檢舉的內容我們會在 24 小時內處理。</p>
+<h2>兒童</h2>
+<p>本 App 顯示的是未經過濾的使用者產生內容，分級為 17+，不適合兒童使用。</p>
+<h2>聯絡</h2>
+<p>有任何問題、或要刪除伺服器上（含圖床）跟你有關的資料，請來信：<a href="mailto:support@isptt.app">support@isptt.app</a></p>
+<h2>政策變更</h2>
+<p>本政策若有變更，會更新本頁最上方的日期。實質變更會在 App 內告知。</p>
+<footer>isPTT 是第三方開發的 PTT 閱讀器，與批踢踢實業坊官方無隸屬關係。</footer>
 </main>
 </body></html>
